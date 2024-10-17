@@ -77,7 +77,6 @@ const Signup = () => {
 
         if (validate())
             dispatch(signup(formValues)).then(() => {
-                localStorage.removeItem('accessToken');
                 setFormValues({
                     name: '',
                     email: '',

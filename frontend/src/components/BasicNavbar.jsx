@@ -1,19 +1,20 @@
 import { useEffect, useState } from "react";
-import { Button, Container, Nav, Navbar } from "react-bootstrap";
+import { Container, Nav, Navbar } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, NavLink, useNavigate } from "react-router-dom";
-import { getCurrentUser, login, logout } from '../store/userSlice';
+import { Link, NavLink} from "react-router-dom";
+import { getCurrentUser} from '../store/userSlice';
 import DropDown from './DropDown';
 
 const BasicNavbar = () => {
   const [open, setOpen] = useState(false);
   const dispatch = useDispatch();
-  const navigate = useNavigate();
   const { user, status } = useSelector((state) => state.user);
 
   useEffect(() => {
-    dispatch(getCurrentUser());
-  }, [dispatch]);
+    if(status === 'idle'){
+      dispatch(getCurrentUser());
+    }
+  }, [dispatch, status]);
 
   return (
     <>

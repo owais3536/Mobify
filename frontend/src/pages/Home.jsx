@@ -12,24 +12,20 @@ const Home = () => {
 
     const [search, setSearch] = useState("");
     const [selectBrand, setSelectBrand] = useState("");
-    console.log(selectBrand);
 
     const brands = ["Apple", "Samsung", "Oneplus", "Xaomi", "Oppo", "Infinix", "Google", "Vivo", "Techno"];
 
     const { posts, status } = useSelector(state => state.posts);
 
     useEffect(() => {
-        if (status === 'idle') {
             dispatch(fetchAllPosts());
-        }
-    }, [dispatch, status]);
+    }, [dispatch]);
 
     // filter posts based on search term and selected brand
     const filterPosts = posts.filter(post => {
         const matchesSearch =
             search.toLowerCase() === "" || post.title.toLowerCase().includes(search.toLowerCase());
         const matchesBrand = selectBrand === "" || selectBrand === post.brand;
-        console.log(matchesBrand);
 
         return matchesSearch && matchesBrand;
     });

@@ -508,7 +508,7 @@ a {
 }
 
 .categories .category-list li {
-    display: block;
+    display: inline !important;
     font-size: 1rem;
     font-weight: 400;
     cursor: pointer;
@@ -572,6 +572,17 @@ a {
     .categories-list li img {
         height: 50px;
         width: 80px;
+    }
+    .categories .category-list {
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    
+    .categories .category-list li {
+        font-size: 1rem;
+        font-weight: 400;
+        cursor: pointer;
+        padding: 1rem;
     }
 }
 

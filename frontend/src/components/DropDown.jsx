@@ -6,17 +6,12 @@ import { getCurrentUser, logout } from '../store/userSlice';
 const DropDown = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    // const { user, status } = useSelector((state) => state.user);
 
     const handleLogout = () => {
         dispatch(logout()).then(() => {
             navigate('/');
         });
     };
-
-    // useEffect(() => {
-    //     dispatch(getCurrentUser());
-    // }, [dispatch]);
 
 
     return (
