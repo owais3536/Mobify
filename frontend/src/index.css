@@ -14,7 +14,6 @@ a {
 .app {
     display: flex;
     flex-direction: column;
-    max-height: 100vh;
     padding: 0;
     margin: 0;
 }
@@ -391,6 +390,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .post-details-page {
@@ -412,6 +412,7 @@ a {
 .post-details-container .details {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .post-details-page .post-content {
@@ -558,6 +559,9 @@ a {
         height: 80px;
         width: 120px;
     }
+    .categories h1 {
+        font-size: 1.75rem;
+    }
 }
 
 
@@ -565,6 +569,9 @@ a {
     .categories-list li img {
         height: 50px;
         width: 60px;
+    }
+    .categories h1 {
+        font-size: 1.25rem;
     }
 }
 
@@ -584,6 +591,9 @@ a {
         cursor: pointer;
         padding: 1rem;
     }
+    .categories h1 {
+        font-size: 2rem;
+    }
 }
 
 @media screen and (max-width: 375px) {
@@ -598,5 +608,6 @@ a {
         width: 100%;
         font-size: 0.78rem;
         font-weight: 400;
+        text-wrap: wrap;
     }
 }

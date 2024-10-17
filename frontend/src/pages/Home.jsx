@@ -13,7 +13,7 @@ const Home = () => {
     const [search, setSearch] = useState("");
     const [selectBrand, setSelectBrand] = useState("");
 
-    const brands = ["Apple", "Samsung", "Oneplus", "Xaomi", "Oppo", "Infinix", "Google", "Vivo", "Techno"];
+    const brands = ["Apple", "Samsung", "Oneplus", "Xiaomi", "Oppo", "Infinix", "Google", "Vivo", "Techno"];
 
     const { posts, status } = useSelector(state => state.posts);
 

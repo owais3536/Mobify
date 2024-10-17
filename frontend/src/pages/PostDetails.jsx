@@ -30,7 +30,7 @@ const PostDetails = () => {
             <Container className='post-details-container'>
                 {currentPost ? (<>
                     <div className='post-img'>
-                        <img src={currentPost.image} />
+                        <img src={currentPost.image} style={{ objectFit: "contain"}} />
                     </div>
                     <div className="details">
                         <div className='post-content'>
